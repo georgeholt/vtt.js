@@ -3,7 +3,7 @@ var exec = require("child_process").exec,
       "lib/vttcue.js",
       "lib/vttregion.js",
       "lib/vtt.js",
-      "node_modules/text-encoding/lib/encoding.js"
+      // "node_modules/text-encoding/lib/encoding.js"
     ],
     banner = "/* <%= pkg.name %> - v<%= pkg.version %> (<%= pkg.homepage %>) " +
              "built on <%= grunt.template.today('dd-mm-yyyy') %> */\n"
@@ -35,12 +35,12 @@ module.exports = function( grunt ) {
       },
       dist: {
         files: {
-          "dist/vtt.min.js": distFiles
+          "dist/vtt.min.js": "dist/vtt.js"
         }
       },
       dev: {
         files: {
-          "dev_build/vtt.min.js": distFiles
+          "dev_build/vtt.min.js": "dev_build/vtt.js"
         }
       }
     },

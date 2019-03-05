@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/mozilla/vtt.js.svg?branch=master)](https://travis-ci.org/mozilla/vtt.js) [![npm-version](http://img.shields.io/npm/v/vtt.js.svg)](https://www.npmjs.org/package/vtt.js) [![Dependency Status](https://david-dm.org/mozilla/vtt.js.svg?theme=shields.io)](https://david-dm.org/mozilla/vtt.js) [![devDependency Status](https://david-dm.org/mozilla/vtt.js/dev-status.svg?theme=shields.io)](https://david-dm.org/mozilla/vtt.js#info=devDependencies)
 
+**Note: This is a fork specifically made for use on [iono.fm](https://iono.fm) and only includes the parts necessary to support audio content.**
+
 Implementation of the [WebVTT](https://developer.mozilla.org/en-US/docs/HTML/WebVTT) spec in JavaScript. Can be used
 in NodeJS, on the browser, and many other places. Mozilla uses this implementation for parsing and processing WebVTT
 files in Firefox/Gecko.
@@ -530,18 +532,18 @@ for the task. If you want to know more about `cue2json` you can run it directly
 like so:
 
 ```bash
-$ ./bin/cue2json.js 
+$ ./bin/cue2json.js
 $ Generate JSON test files from a reference VTT file.
 $ Usage: node ./bin/cue2json.js [options]
-$ 
+$
 $ Options:
-$   -v, --vtt      Path to VTT file.                                                                                     
+$   -v, --vtt      Path to VTT file.
 $   -d, --dir      Path to test directory. Will recursively find all JSON files with matching VTT files and rewrite them.
-$   -c, --copy     Copies the VTT file to a JSON file with the same name.                                                
-$   -p, --process  Generate a JSON file of the output returned from the processing model. 
+$   -c, --copy     Copies the VTT file to a JSON file with the same name.
+$   -p, --process  Generate a JSON file of the output returned from the processing model.
 ```
 
-**Notes:** 
+**Notes:**
 
 * `cue2json` utilizes the last development build done. This is why the Grunt `run` task is
 good as you don't have to remember to build it yourself. If you don't build it yourself then you could
